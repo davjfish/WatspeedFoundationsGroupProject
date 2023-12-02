@@ -12,4 +12,3 @@
 | David Fishman  | davjfish@gmail.com         |
 
 
-##### Notes from Meeting on November 11, 2023
