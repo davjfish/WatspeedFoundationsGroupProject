@@ -1,0 +1,60 @@
+﻿"Cube Title","Product Id","CANSIM Id",URL,"Cube Notes","Archive Status",Frequency,"Start Reference Period","End Reference Period","Total number of dimensions"
+"Hogs, sheep and lambs, farm and meat production","32100126","003-0028","https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3210012601",1,"CURRENT - a cube available to the public and that is current","Annual","1920-01-01","2022-01-01","3",
+
+"Dimension ID","Dimension name","Dimension Notes","Dimension Definitions"
+"1","Geography",,""
+"2","Estimates",,""
+"3","Livestock",,""
+
+"Dimension ID","Member Name","Classification Code","Member ID","Parent Member ID",Terminated,"Member Notes","Member Definitions"
+"1","Canada","[11124]","1","","",,
+"2","Inspected slaughterings","","6","5","",3;4;9,
+"2","Uninspected slaughterings","","7","5","",,
+"2","Farm use, killed and eaten","","8","7","t",,
+"2","Sold, killed and sold","","9","7","t",,
+"2","Other uninspected slaughterings","","10","7","t",,
+"2","Estimated farm output","","3","","",,
+"2","Exported alive, farm production","","4","","",,
+"2","Total slaughterings, farm and meat production","","5","","",2,
+"2","Imported alive, farm production","","11","","",,
+"2","Total supply","","12","","",,
+"2","Average cold trimmed weight, meat production","","13","","",5,
+"2","Edible offal, meat production","","14","","",,
+"2","Average cold dressed weight, meat production","","15","","",8,
+"3","Hogs","","1","","",,
+"3","Sheep and lambs","","2","","",,
+
+Symbol Legend
+Description,Symbol
+"not available for a specific reference period","..",
+"less than the limit of detection","<LOD",
+"value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded","0s",
+"data quality: excellent","A",
+"data quality: very good","B",
+"data quality: good","C",
+"data quality: acceptable","D",
+"use with caution","E",
+"too unreliable to be published","F",
+"not applicable","...",
+"preliminary","p",
+"revised","r",
+"suppressed to meet the confidentiality requirements of the Statistics Act","x",
+"terminated","t",
+
+"Survey Code","Survey Name"
+"3437","Farm Cash Receipts"
+"3460","Livestock Survey"
+
+"Subject Code","Subject Name"
+"32","Agriculture and food"
+
+"Note ID",Note
+1,"In 1975 the June survey was changed to July 1."
+2,"Federally and provincially inspected slaughter, commercial slaughter and other uninspected slaughter."
+3,"Data for federally inspected slaughter of hogs is obtained from the Market and Industry Services Branch of Agriculture and Agri-Food Canada."
+4,"Data for federally inspected slaughter of sheep and lambs is obtained from the Market and Industry Services Branch of Agriculture and Agri-Food Canada. Includes provincially inspected slaughter from 1985."
+5,"Not including fats and edible offal."
+8,"Not including edible offal."
+9,"Includes commercial slaughter, which may be inspected based on provincial regulations."
+
+"Correction ID","Correction Date","Correction Note"
