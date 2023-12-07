@@ -1,0 +1,84 @@
+﻿"Cube Title","Product Id","CANSIM Id",URL,"Cube Notes","Archive Status",Frequency,"Start Reference Period","End Reference Period","Total number of dimensions"
+"Selected livestock and poultry, Census of Agriculture historical data","32100155","004-0004","https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3210015501",1;2;8,"CURRENT - a cube available to the public and that is current","Every 5 years","1921-01-01","2021-01-01","3",
+
+"Dimension ID","Dimension name","Dimension Notes","Dimension Definitions"
+"1","Geography",,""
+"2","Selected livestock",,""
+"3","Unit of measure",,""
+
+"Dimension ID","Member Name","Classification Code","Member ID","Parent Member ID",Terminated,"Member Notes","Member Definitions"
+"1","Newfoundland and Labrador","[10]","2","1","",,
+"1","Prince Edward Island","[11]","3","1","",,
+"1","Nova Scotia","[12]","4","1","",,
+"1","New Brunswick","[13]","5","1","",,
+"1","Quebec","[24]","6","1","",,
+"1","Ontario","[35]","7","1","",,
+"1","Manitoba","[46]","8","1","",,
+"1","Saskatchewan","[47]","9","1","",,
+"1","Alberta","[48]","10","1","",,
+"1","British Columbia","[59]","11","1","",,
+"1","Canada","[11124]","1","","",,
+"2","Dairy cows","","2","1","",3;4;5,
+"2","Beef cows","","3","1","",3;4;5,
+"2","Total heifers","","4","1","",3,
+"2","Bulls, 1 year and over","","5","1","",3,
+"2","Steers, 1 year and over","","6","1","",3,
+"2","Calves, under 1 year","","7","1","",3,
+"2","Boars","","9","8","",,
+"2","Sows and gilts for breeding","","10","8","",,
+"2","All other pigs","","11","8","",8,
+"2","Rams","","13","12","",6,
+"2","Ewes","","14","12","",6,
+"2","All other sheep","","15","12","",6,
+"2","Total cattle","","1","","",3,
+"2","Total pigs","","8","","",,
+"2","Total sheep","","12","","",6,
+"2","Horses and ponies","","16","","",,
+"2","Goats","","17","","",,
+"2","Wild boars","","18","","",,
+"2","Mink","","19","","",7,
+"2","Fox","","20","","",,
+"2","Bison","","21","","",,
+"2","Llamas and alpacas","","22","","",,
+"2","Deer","","23","","",,
+"2","Elk (wapiti)","","24","","",,
+"2","Total hens and chickens","","25","","",,
+"2","Turkeys","","26","","",,
+"3","Number of farms reporting","","1","","",,
+"3","Number of animals","","2","","",,
+"3","Average number","","3","","",,
+
+Symbol Legend
+Description,Symbol
+"not available for a specific reference period","..",
+"less than the limit of detection","<LOD",
+"value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded","0s",
+"data quality: excellent","A",
+"data quality: very good","B",
+"data quality: good","C",
+"data quality: acceptable","D",
+"use with caution","E",
+"too unreliable to be published","F",
+"not applicable","...",
+"preliminary","p",
+"revised","r",
+"suppressed to meet the confidentiality requirements of the Statistics Act","x",
+"terminated","t",
+
+"Survey Code","Survey Name"
+"3438","Census of Agriculture"
+
+"Subject Code","Subject Name"
+"32","Agriculture and food"
+
+"Note ID",Note
+1,"The definition of a census farm changed multiple times since 1921. These changes may affect the comparability of data among censuses. For a summary of these changes, refer to <a href="https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=pop012">Dictionary, Census of Population, 2021</a>."
+2,"Data for Newfoundland are not included in the Canada figures for the 1921, 1931 and 1941 Censuses of Agriculture since Newfoundland did not join Canada until 1949."
+3,"Comparability among censuses prior to 1996 and those after is affected by a change in census date from the first week of June to mid-May when a lower percentage of calvings would have occurred."
+4,"In 1976, the number of "Beef cows" was obtained by subtracting "Cows milking or to be milked" from "Total cows." As a result, the size of the dairy herd was understated and the size of the beef herd was overstated because dairy farmers did not always report dry dairy cows under "Cows milking or to be milked." Since 1981, when a separate question on the number of "beef cows" was introduced, the reporting of both dairy and beef cows has improved."
+5,"Due to response errors in 1996, the number of "Dairy cows" and the number of farms reporting dairy cows may have been overstated, whereas the number of "Beef cows" and the number of farms reporting beef cows may have been understated. The total number of cattle and calves, however, was not affected. These errors limit the comparability of the data between 1996 and the other census years. Response errors were more prevalent in provinces with a low proportion of dairy operations."
+6,"In 1976 and 1981 rams were included with "Ewes and wethers." In 1986 and 1996 "Rams" were reported separately while wethers were included with "Ewes." In 1991 and 2001 "Rams" and "Ewes" were reported separately while "All other sheep and lambs" included wethers. Since 2006 , only "Rams," "Ewes" and "Lambs" were reported."
+7,"Due to conceptual changes, 2011 data are not comparable with previous censuses: 2011 data includes breeding stock only, whereas earlier data includes all mink."
+8,"On March 6, 2013, Statistics Canada corrected "other pigs" that were released on December 10, 2012. This correction pertains to double counting of the components making up this variable. This does not affect any related variables in this table."
+
+"Correction ID","Correction Date","Correction Note"
