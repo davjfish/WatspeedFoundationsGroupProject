@@ -1,0 +1,81 @@
+﻿"Cube Title","Product Id","CANSIM Id",URL,"Cube Notes","Archive Status",Frequency,"Start Reference Period","End Reference Period","Total number of dimensions"
+"Farm supply and disposition of grains","32100015","001-0043",https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3210001501,1;2,"null","null","2001-12-01","2023-07-01","3",
+
+"Dimension ID","Dimension name","Dimension Notes","Dimension Definitions"
+"1","Geography",,""
+"2","Type of crop",,""
+"3","Farm supply and disposition of grains",,""
+
+"Dimension ID","Member Name","Classification Code","Member ID","Parent Member ID",Terminated,"Member Notes","Member Definitions"
+"1","Eastern Canada","","2","1","",,
+"1","Western Canada","","9","1","",,
+"1","Maritime provinces","","3","2","",,
+"1","Quebec","[24]","7","2","",,
+"1","Ontario","[35]","8","2","",,
+"1","Prince Edward Island","[11]","4","3","",,
+"1","Nova Scotia","[12]","5","3","",,
+"1","New Brunswick","[13]","6","3","",,
+"1","Prairie provinces","[4]","10","9","",,
+"1","British Columbia","[59]","14","9","",,
+"1","Manitoba","[46]","11","10","",,
+"1","Saskatchewan","[47]","12","10","",,
+"1","Alberta","[48]","13","10","",,
+"1","Canada","[11124]","1","","",,
+"2","Durum wheat","","2","1","",5,
+"2","Wheat, excluding durum","","3","1","",5,
+"2","All wheat","","1","","",5,
+"2","Oats","","4","","",5,
+"2","Barley","","5","","",5,
+"2","Flaxseed","","6","","",3;5,
+"2","Canola","","7","","",4;5;6,
+"2","Soybeans","","8","","",2;5,
+"2","Rye","","9","","",5,
+"2","Dry Peas","","10","","",,
+"2","Lentils","","11","","",,
+"2","Mustard seed","","12","","t",,
+"2","Chick peas","","13","","t",,
+"2","Canary seed","","14","","t",,
+"2","Sunflower seed","","15","","t",,
+"3","Production","","3","1","",,
+"3","Beginning stocks","","2","1","",,
+"3","Deliveries","","5","4","",3;4;8,
+"3","Seed requirements","","6","4","",,
+"3","Ending stocks","","7","4","",7,
+"3","Animal feed, waste and dockage","","8","4","",,
+"3","Total disposition","","4","","",,
+"3","Total supplies","","1","","",,
+
+Symbol Legend
+Description,Symbol
+"not available for a specific reference period","..",
+"less than the limit of detection","<LOD",
+"value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded","0s",
+"data quality: excellent","A",
+"data quality: very good","B",
+"data quality: good","C",
+"data quality: acceptable","D",
+"use with caution","E",
+"too unreliable to be published","F",
+"not applicable","...",
+"preliminary","p",
+"revised","r",
+"suppressed to meet the confidentiality requirements of the Statistics Act","x",
+"terminated","t",
+
+"Survey Code","Survey Name"
+"3401","Field Crop Reporting Series"
+
+"Subject Code","Subject Name"
+"32","Agriculture and food"
+
+"Note ID",Note
+1,"All grains except soybeans are based on the crop year August to July. The data for the periods are cumulative over the crop year (March 20XX = August to March; July 20XX = August to July; and December 20XX = August to December)."
+2,"Soybeans are based on the crop year September to August. The data for the periods are cumulative over the crop year (March 20XX = September to March; July 20XX = September to August; and December 20XX = September to December)."
+3,"Excludes flaxseed deliveries to process elevators."
+4,"Includes only licensed canola deliveries in Ontario."
+5,"Animal feed, waste and dockage calculated residually."
+6,"Historical data may include some rapeseed."
+7,"Also known as carryover."
+8,"Data in this table are updated three times a year. For the most updated data on grain deliveries, see table 32-10-0351."
+
+"Correction ID","Correction Date","Correction Note"
