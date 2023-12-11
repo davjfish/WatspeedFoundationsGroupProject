@@ -5,24 +5,25 @@
 \subsubsection{What is the nature of the data you chose?}
 
 The dataset we first selected was sourced from the Government of Canada's Open Government Portal. It records the monthly price of various crop, commodity and livestock products produced in Canada. The raw data contains the price of each farm product, the month the price was captured, a product description, and the province of production. Our desire to perform analysis regarding the relationship between price and production led us to seek additional datasets containing production data for selected commodities. This production data was also sourced form Government of Canada's Open Government Portal. It recorded the monthly production of farm products by province of production over a period of years.
+
 \subsubsection{Why is it interesting?}
 
-The datasets we eventually selected were interesting as between them they contain a time series of prices for different products and from different provinces, and the production for those products over of a period of over time, from January 1980 to the present. The duration of the  dataset provided an opportunity to find patterns and the possibility of a relationship between price and the amount of production within the regions of Canada.  Analysis of these trends  could provide us with insights with current day problems such as inflation and the cost of living crisis. 
+The datasets we eventually selected were interesting as between them they contain a time series of prices for different products and from different provinces, and the production for those products over of a period of over time, from January 1980 to the present. The duration of the dataset provided an opportunity to find patterns over time and the possibility of a relationship between price and the amount of production within the regions of Canada.  Analysis of these trends could provide us with insight to current day problems such as inflation and the cost of living crisis. 
 \subsection{Analysis}
 
 \subsubsection{What were the challenges?}
 
-Within our chosen datasets of Canadian farm product prices and production spanning from 1980 to present, our analysis required us to overcome a series of challenges that demanded a number of solutions. 
+Within our chosen datasets of Canadian farm product prices and production spanning from January 1980 to present, our analysis required us to overcome a series of challenges. 
 
-The format of the certain features within the data, such as the REF\_DATE were recorded as text and as such were not immediately usable, leading us to perform some feature engineering.
+The format of the certain features within the data, such as the REF\_DATE were imported as a text datatype and as such were not immediately usable, leading us to perform some feature engineering.
 
-The structure of the pricing dataset allowed for differing units of measured to utilized within the data for a singled commodity. 
+The structure of the pricing dataset allowed for differing units of measured to be utilized within the data for a singled commodity. 
 
-The Wheat production dataset also could contain multiple entries for any given year which made comparison to other commodities problematic. 
+Also, the Wheat Production dataset could contain multiple entries for any given year which merging with the pricing data problematic. 
 
-The differing ranges of data of the farm products represented in the dataset posed a challenge in terms of selecting the beat products for analysis  
+The differing ranges of data of for each of the farm products in the dataset posed a challenge in terms of selecting the best data for analysis  
 
-The publication of distinct the price and production datasets further added layers of complexity. Our analysis required these be merged.
+The publication of distinct within different files for the Price and Production datasets further added layers of complexity. Our analysis required these be merged.
 
 The presence of null values in the merged pricing and production datasets added also required additional action prior to our final analysis. 
 
@@ -30,19 +31,19 @@ Finally, the limited overlap in time series, resulted in a comparatively small s
 
 \subsubsection{How did you overcome them?}
 
-To overcome the challenges presented in previous section, we took a number of steps to prepare the data and create a model for analysis  
+To overcome the challenges presented in previous section, we took a number of steps to prepare the data and to create and validate a model for analysis.  
 
 The date feature REF\_DATE as imported as a text and feature engineering was leveraged to change its datatype to a date.
 
-During the validation of the model, we noted that the Wheat production data reported production in March, July and December, as opposed once a year. As the March and July values were the same the previously reported December value, we were able to make the assumption that the December values where the correct ones. Accordingly, we selected the the December values and re-indexed the data to match the price data prior to merging.
+During the validation of the model, we noted that the Wheat Production data reported production in March, July and December, as opposed once a year. As the March and July values were the same the previously reported December value, we were able to make the assumption that the December values where the correct ones. Accordingly, we selected the the December values and re-indexed the data to match the Price dataset prior to merging.
 
 The source of the data noted that the unit of measure many not be consistent. As part of our data cleaning we validated that the unit of measure for our the selected products was indeed consistent. 
 
-When reviewing a visual representing of the time series data for all provinces. It became evident that all the province had a similar patten, with the exception of Newfoundland and Labrador. Therefore we elected to exclude Newfoundland and Labrador from our subsequent analysis.
+When reviewing a line plot of the time series data for all provinces. It became evident that all the province had a similar patten, with the exception of Newfoundland and Labrador. Therefore we elected to exclude Newfoundland and Labrador from our subsequent analysis.
 
-To analyze to impact of product production on product price it was needed to add production data to our model. Using the Government of Canada's Open Government Portal we search and found production data for our selected product products. After similar feature engineering to correct the REF\_DATE feature, we merged the production data using the product description as a key.
+To analyze to impact of product production on product price it was needed to add production data to our model. Using the Government of Canada's Open Government Portal we searched for and found production data for our selected product products. After similar feature engineering to correct the REF\_DATE feature, we merged the production data using the product description as a key.
 
-The availability of price and production data led us to select Meat Chickens, Wheat and Hogs as products for final analysis on relationship between price and production. The availability of price and production data also required us to drop null values resulting in few data points for comparison.
+The availability of price and production data led us to select Meat Chickens, Wheat and Hogs as products for final analysis on any relationship between price and production. The availability of price and production data also required us to drop null values resulting in few data points for comparison.
 
 To evaluate the relationship between price and production we applied the technique of linear regression on the resulting data model.
 
@@ -53,20 +54,20 @@ To evaluate the relationship between price and production we applied the techniq
 After reviewing the liner regression results for Meat Chickens, Wheat and Hogs we found the following:
 
 For Meat Chickens, the model intercept was found to be 26.4810 and the coefficient price variable is 50.9459. 
+\newline
+production = 26.4810 + 50.9459 \times price
+\newline
+The F-staticic for this model was 12.47 and the chances of observing this statistic under a normal distribution is less than 0.05\%. Therefore, with a p-value set to 0.05, we would reject the null hypothesis. 
 
-production = 26.4810 + 50.9459 x price
-
-The F-staticic for this model was 12.47 and the changes of observing this statistic under a normal distribution is less than 0.05\%. Therefore, with a p-value set to 0.05, we would reject the null hypothesis. 
-
-An R2 value of  0.675  means approximately 67\% of the variance of the data can be accounted for by this model. We lead us to the conclusion that price does affect production in Meat Chickens and supports the regression of the null hypothesis. 
+An R^2 value of  0.675  means approximately 67\% of the variance of the data can be accounted for by this model. We lead us to the conclusion that price does affect production in Meat Chickens and supports the regression of the null hypothesis. 
 
 The model for Wheat had an intercept of 1.285e4 and the coefficient for the price variable is 41.3883
+\newline
+production  =  1.285e4 + 41.3883 \times price
+\newline
+The F-staticic for this Wheat was 8.065 and the chances of observing this statistic under a normal distribution is less than 0.05\%. Therefore, with a p-value set to 0.05, we would reject the null hypothesis. 
 
-production  =  1.285e4 + 41.3883 x price 
-
-The F-staticic for this Wheat was 8.065 and the changes of observing this statistic under a normal distribution is less than 0.05\%. Therefore, with a p-value set to 0.05, we would reject the null hypothesis. 
-
-The R2 is 0.28 which means approximately 30\% of the variance of the data can be accounted for by this model. There is more unexplained variability in these data compared to the Meat Chickens
+The R^2 is 0.28 which means approximately 30\% of the variance of the data can be accounted for by this model. There is more unexplained variability in these data compared to the Meat Chickens
 
 Finally the model for Hogs has an F-staticic of 0.3441 and the chances of observing this statistic under a normal distribution is approximately 56\%. Therefore, with a p-value set to 0.05, we are not in a position to reject the null hypothesis. 
 

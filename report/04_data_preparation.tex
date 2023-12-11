@@ -2,7 +2,7 @@
 
 \subsection{What was your data source (e.g., web scraping, corporate data, a standard machine learning data set, open data, etc.)?}
 
-The dataset used in this study is sourced from open data published by Statistics Canada, a government institution. The use of open data from a reputable government source enhances transparency and allows for reproducibility in research
+The dataset used in this study is sourced from open data published by the Government of Canada, on its Open Government Portal, an official government website. The use of open data from a reputable government source enhances transparency and allows for reproducibility in research.
 
 \subsection{How good was the data quality?}
 
@@ -10,11 +10,11 @@ The dataset used in this study is sourced from open data published by Statistics
 
 \subsection{What did you need to do to procure it?}
 
-To procure the dataset, we downloaded the csv of the dataset and we read it using the pandas library.
+To procure the dataset, we downloaded the csv of the dataset and we ingested it using the pandas library.
 
 \subsection{What tools or code did you need to use to prepare it for analysis?}
 
-First, we segmented our analysis into three distinct categories: chicken, hogs, and wheat. The main libraries we used for our analysis were pandas, seaborn, numpy and statsmodels.api.Utilizing a dedicated helper function, we crafted time series plots for each category, with a focus on prices—a pivotal variable in our analysis. To ensure data completeness, we applied a boolean mask to handle null values. While exploring the data we recognized the historical prices of Newfoundland is very different from other provinces as you can see in Figure~\ref{fig:chicken_prices} so we decided to exclude Newfoundland from our analysis. We decided that it would be easiest to work with the data if all the prices were aggregated into a single response so we created a time series for each category where the mean prices for each category is the data and the datetime objects as the index.
+First, we segmented our analysis into three distinct categories: Chicken Meat, Hogs, and Wheat. The main libraries we used for our analysis were pandas, seaborn, numpy and statsmodels.api.Utilizing a dedicated helper function, we crafted time series plots for each category, with a focus on prices—a pivotal variable in our analysis. To ensure data completeness, we applied a boolean mask to handle null values. While exploring the data we recognized the historical prices of Newfoundland is very different from other provinces as you can see in Figure~\ref{fig:chicken_prices} so we decided to exclude Newfoundland from our analysis. We decided that it would be easiest to work with the data if all the prices were aggregated into a single response so we created a time series for each category where the mean prices for each category is the data and the datetime objects as the index.
 
 \subsection{What challenges did you face?}
 
