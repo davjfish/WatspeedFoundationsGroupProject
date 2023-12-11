@@ -32,7 +32,7 @@ Finally, the limited overlap in time series, resulted in a comparatively small s
 
 To overcome the challenges presented in previous section, we took a number of steps to prepare the data and create a model for analysis  
 
-The date feature REF_DATE as imported as a text and feature engineering was leveraged to change its datatype to a date.
+The date feature REF\_DATE as imported as a text and feature engineering was leveraged to change its datatype to a date.
 
 During the validation of the model, we noted that the Wheat production data reported production in March, July and December, as opposed once a year. As the March and July values were the same the previously reported December value, we were able to make the assumption that the December values where the correct ones. Accordingly, we selected the the December values and re-indexed the data to match the price data prior to merging.
 
@@ -40,7 +40,7 @@ The source of the data noted that the unit of measure many not be consistent. As
 
 When reviewing a visual representing of the time series data for all provinces. It became evident that all the province had a similar patten, with the exception of Newfoundland and Labrador. Therefore we elected to exclude Newfoundland and Labrador from our subsequent analysis.
 
-To analyze to impact of product production on product price it was needed to add production data to our model. Using the Government of Canada’s Open Government Portal we search and found production data for our selected product products. After similar feature engineering to correct the REF_DATE feature, we merged the production data using the product description as a key. 
+To analyze to impact of product production on product price it was needed to add production data to our model. Using the Government of Canada's Open Government Portal we search and found production data for our selected product products. After similar feature engineering to correct the REF\_DATE feature, we merged the production data using the product description as a key.
 
 The availability of price and production data led us to select Meat Chickens, Wheat and Hogs as products for final analysis on relationship between price and production. The availability of price and production data also required us to drop null values resulting in few data points for comparison.
 
