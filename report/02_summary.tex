@@ -8,7 +8,7 @@ The dataset we first selected was sourced from the Government of Canada's Open G
 It records the monthly price of various crop, commodity and livestock products produced in Canada.
 The raw data contains the price of each farm product, the month the price was captured, a product description, and the province of production.
 Our desire to perform analysis regarding the relationship between price and production led us to seek additional datasets containing production data for selected commodities.
-This production data was also sourced form Government of Canada's Open Government Portal.
+This production data was also sourced from the Government of Canada's Open Government Portal.
 It recorded the monthly production of farm products by province of production over a period of years.
 
 \subsubsection{Why is it interesting?}
@@ -23,11 +23,11 @@ Analysis of these trends could provide us with insight to current day problems s
 
 Within our chosen datasets of Canadian farm product prices and production spanning from January 1980 to present, our analysis required us to overcome a series of challenges.
 
-The format of the certain features within the data, such as the REF\_DATE were imported as a text datatype and as such were not immediately usable, leading us to perform some feature engineering.
-The structure of the pricing dataset allowed for differing units of measured to be utilized within the data for a singled commodity.
-Also, the Wheat Production dataset could contain multiple entries for any given year which merging with the pricing data problematic.
-The differing ranges of data of for each of the farm products in the dataset posed a challenge in terms of selecting the best data for analysis
-The publication of distinct within different files for the Price and Production datasets further added layers of complexity.
+The format of certain features within the data, such as the REF\_DATE were imported as a text datatype and as such were not immediately usable, leading us to perform some feature engineering.
+The structure of the pricing dataset allowed for differing units of measure to be utilized within the data for a singled commodity.
+Also, the Wheat Production dataset could contain multiple entries for any given year which made merging with the pricing data problematic.
+The differing ranges of data of each of the farm products in the dataset posed a challenge in terms of selecting the best data for analysis
+The publication of Price and Production datasets in distinct files further added layers of complexity.
 Our analysis required these be merged.
 The presence of null values in the merged pricing and production datasets added also required additional action prior to our final analysis.
 Finally, the limited overlap in time series, resulted in a comparatively small sample size, and led to the selection of suitable techniques suitable for smaller datasets.
@@ -35,15 +35,14 @@ Finally, the limited overlap in time series, resulted in a comparatively small s
 \subsubsection{How did you overcome them?}
 
 To overcome the challenges presented in previous section, we took a number of steps to prepare the data and to create and validate a model for analysis.  
-The date feature REF\_DATE as imported as a text and feature engineering was leveraged to change its datatype to a date.
-During the validation of the model, we noted that the Wheat Production data reported production in March, July and December, as opposed once a year.
-As the March and July values were the same the previously reported December value, we were able to make the assumption that the December values where the correct ones.
+The date feature REF\_DATE was imported as a text datatype and feature engineering was leveraged to change its datatype to a date.
+During the validation of the model, we noted that the Wheat Production data reported production in March, July and December, as opposed once a year like the others.
+As the March and July values were the same as the previously reported December value, we were able to make the assumption that the December values where the correct ones.
 Accordingly, we selected the December values and re-indexed the data to match the Price dataset prior to merging.
-The source of the data noted that the unit of measure many not be consistent.
-As part of our data cleaning we validated that the unit of measure for our the selected products was indeed consistent.
+The source of the data noted that the unit of measure many not be consistent. As part of our data cleaning we validated that the unit of measure for our the selected products was indeed consistent.
 When reviewing a line plot of the time series data for all provinces.
-It became evident that all the province had a similar patten, with the exception of Newfoundland and Labrador.
-Therefore we elected to exclude Newfoundland and Labrador from our subsequent analysis.
+It became evident that all the province had a similar patten of price over the time series, with the exception of Newfoundland and Labrador.
+Therefore, we elected to exclude Newfoundland and Labrador from our subsequent analysis.
 To analyze to impact of product production on product price it was needed to add production data to our model.
 Using the Government of Canada's Open Government Portal we searched for and found production data for our selected product products.
 After similar feature engineering to correct the REF\_DATE feature, we merged the production data using the product description as a key.
